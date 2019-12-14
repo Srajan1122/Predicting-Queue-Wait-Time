@@ -1,0 +1,57 @@
+{% extends "Pages/Extended.html" %}
+{% block body %}
+  
+     <div class="container-fluid my-3">
+     <form>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault01">Department</label>
+            <input type="text" class="form-control " id="validationDefault01" value="{{ Pro.Type }}" readonly>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault02">Number</label>
+            <input type="text" class="form-control" id="validationDefault02" value="{{Pro.Uid }}" readonly>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationDefaultUsername">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault03">Day</label>
+            <select class="custom-select" id="validationDefault04" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationDefault04">Shift</label>
+            <select class="custom-select" id="validationDefault04" required>
+              <option disabled selected value> -- select an option -- </option>
+              <option>Morning</option>
+              <option>Evening</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationDefault05">Entry Time</label>
+            <input type="Time" class="form-control" id="validationDefault05" required>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+      <h4 class="my-3"><span class="badge badge-light">Your Predicted Time for {{Pro.Type}} Department is : 20</span></h4>
+    </div>
+    
+{% endblock body %}
